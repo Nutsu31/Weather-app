@@ -229,10 +229,13 @@ footer img{
 @media only screen and (max-width:560px) {
     header{
         padding: 10px 24px;
-        min-width: 100%;
+        min-width: 560px;
     }
     .boxWrapper{
         justify-content: center;
+    }
+    .addNewLocation{
+        min-width: 560px;
     }
 
 }
@@ -245,9 +248,12 @@ footer img{
         padding: 0 32px;
     }
     ul  .addNewLocation {
-        width: 100%;
+        min-width: 500px;
         align-items: center;
         margin: 20px 0;
+    }
+    .addNewLocation{
+        min-width: 500px;
     }
     .withButton{
         background: transparent;
@@ -258,9 +264,17 @@ footer img{
     }
 }
 @media only screen and (max-width:410px) {
-
+    header{
+        min-width: 410px;
+    }
+    ul{
+        padding: 0;
+    }
     ul > .addNewLocation {
         border-radius: 0;
+    }
+    .addNewLocation{
+        min-width: 410px;
     }
     .addNewLocation h1{
         font-size: 24px;
