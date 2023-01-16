@@ -229,6 +229,7 @@ footer img{
 @media only screen and (max-width:560px) {
     header{
         padding: 10px 24px;
+        min-width: 100%;
     }
     .boxWrapper{
         justify-content: center;
@@ -243,7 +244,7 @@ footer img{
     ul{
         padding: 0 32px;
     }
-    ul > .addNewLocation {
+    ul  .addNewLocation {
         width: 100%;
         align-items: center;
         margin: 20px 0;

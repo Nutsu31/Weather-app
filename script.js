@@ -10,14 +10,14 @@ const cityInputCloser = document.querySelector(".closer");
 const newCityPage = document.querySelector(".addNewCity");
 const addCityiButtonLabel = document.querySelector("#addButtonLabel");
 
-// this is
+// this is city input show button
 addCity.addEventListener("click", () => {
   addCity.style.display = "none";
   addCityiButtonLabel.style.display = "none";
   newCityPage.style.display = "flex";
 });
 
-// this is hidden city selector closer button
+// this is hidden city input  closer button
 cityInputCloser.addEventListener("click", () => {
   newCityPage.style.display = "none";
   addCity.style.display = "block";
