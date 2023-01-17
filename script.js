@@ -36,13 +36,25 @@ async function getData(city) {
 
 const form = document.querySelector("form");
 const list = document.querySelector("ul");
+const weekday = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 
 let today = new Date();
+let wd = String(weekday[today.getDay()]);
 let dd = String(today.getDate()).padStart(2, "0");
 let mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
 let yyyy = today.getFullYear();
 
 today = mm + "/" + dd + "/" + yyyy;
+
+const d = new Date();
 
 async function dotMenu() {
   let miniBarClicked = 0;
@@ -71,7 +83,7 @@ form.addEventListener("submit", async (e) => {
         <img src="${`http://openweathermap.org/img/wn/${getCity.weather[0].icon}@2x.png`}" alt="">
         <div>
           <h1>${getCity.name}, ${getCity.sys.country}</h1>
-          <span>${today}</span>
+          <span>${wd}, ${today}</span>
         </div>
       </div>
     </div>
