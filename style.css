@@ -240,6 +240,7 @@ footer img{
     .addNewLocation{
         min-width: 100%;
         margin: 20px 8px;
+        padding: 32px 64px;
     }
     .otherOptions div{
         padding: 0 10px;
@@ -276,5 +277,16 @@ footer img{
         backdrop-filter: blur(0);
 
         
+    }
+}
+@media only screen and (max-width: 360px) {
+    .left, .right{
+        font-size: 14px;
+    }
+    .left img{
+        width: 32px;
+    }
+    .addNewLocation{
+        padding: 32px 0;
     }
 }
