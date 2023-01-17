@@ -11,7 +11,7 @@
 }
 
 body{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: url('./img/background.png');
     background-size: 1000vh;
@@ -226,66 +226,55 @@ footer img{
     width: 16px;
 }
 
-@media only screen and (max-width:560px) {
+@media only screen and (max-width: 550px) {
     header{
-        min-width: 560px;
-        padding: 10px 84px;
-    }
-    .boxWrapper{
-        justify-content: center;
-    }
-    .addNewLocation{
-        min-width: 560px;
-        border-radius: 0;
-    }
-
-}
-@media only screen and (max-width:500px) {
-
-    .boxWrapper{
-        justify-content: center;
+        padding: 10px;
+        width: 100%;
     }
     ul{
-        padding: 0 32px;
+        width: 100%;
     }
-    ul  .addNewLocation {
-        min-width: 500px;
-        align-items: center;
-        margin: 20px 0;
+    .boxWrapper{
+        width: 100%;
     }
     .addNewLocation{
-        min-width: 500px;
+        min-width: 100%;
+        margin: 20px 8px;
+    }
+    .otherOptions div{
+        padding: 0 10px;
     }
     .withButton{
-        background: transparent;
+        height: fit-content;
+        justify-content: flex-start;
     }
-    #addButton {
+    .withButton #addButton {
+        width: 70px ;
+        height: 70px;
+    }
+    .withButton button{
         background: rgb(0,0,0);
         background: linear-gradient(66deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.4990371148459384) 100%);
     }
+    .addNewCity{
+        width: 100%;
+    }
 }
-@media only screen and (max-width:410px) {
+@media only screen and (max-width:452px) {
     header{
-        min-width: 410px;
+        padding: 0;
     }
     ul{
         padding: 0;
     }
-    ul > .addNewLocation {
-        border-radius: 0;
-    }
     .addNewLocation{
-        min-width: 410px;
+        border-radius: 0;
+        margin: 20px 0;
     }
-    .addNewLocation h1{
-        font-size: 24px;
-    }
-    .temp h1{
-        font-size: 100px;
-    }
-    .addNewLocation #addButton {
-        width: 60px;
-        height: 60px;
-        font-size: 24px;
+    .withButton{
+        background: none;    
+        backdrop-filter: blur(0);
+
+        
     }
 }
