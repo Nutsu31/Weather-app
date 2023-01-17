@@ -60,7 +60,6 @@ form.addEventListener("submit", async (e) => {
   const cityInput = document.querySelector(".city");
   let city = cityInput.value;
   let getCity = await getData(city);
-  let li = document.createElement("li");
 
   cityTemplate += `<div class="addNewLocation">
     <i class="fa-solid fa-ellipsis-vertical" onclick="dotMenu()"></i>

@@ -10,11 +10,10 @@
     text-decoration: none;
 }
 
-body{
+body, header , .boxWrapper, .addNewLocation{
     width: 100%;
-    height: 100vh;
-    background: url('./img/background.png');
-    background-size: 1000vh;
+    background: url('./img/background.png') no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -24,31 +23,27 @@ body{
 }
 
 header{
-    width: 100%;
     height: 92px;
     padding: 10px 84px;
     background: rgba(255, 255, 255, 0.19);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: row;
 }
 
-.header {
+.nav {
     color: white;
     display:  flex;
     align-items: center;
     justify-content: center;
 }
 
-.header > span{
+.nav > span{
     margin-left: 24px ;
 }
 
 .boxWrapper{
-    width: 100%;
-    display: flex;
-    align-items: center;
+    height: fit-content;
     justify-content: flex-start;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 
@@ -64,16 +59,11 @@ ul{
     height: 574px;
     padding: 50px 0 30px 0;
     background: rgb(0,0,0);
-    background: linear-gradient(66deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.4990371148459384) 100%);
+    background: linear-gradient(66deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.2990371148459384) 100%);
     margin: 20px 43px;
-    backdrop-filter: blur(16px);
     border-radius: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     flex-direction: column;
     position: relative;
-    float: left;
 }
 .withButton {
     margin-left: 64px;
@@ -88,6 +78,7 @@ ul{
     border-radius: 50%;
     cursor: pointer;
     border: none;
+    background: rgba(255, 255, 255, 0.26);
 }
 .addNewLocation label{
     cursor: pointer;
@@ -106,20 +97,18 @@ i{
     z-index: 10;
 }
 
-.miniBar {
+.deleteBtn {
     width: 70px;
     height: 30px;
     position: absolute;
     right: 35px;
     top: 20px;
     display: none;
-    display: block;
 }
-.miniBar button{
+.deleteBtn button{
     width: 70px;
     height: 30px;
     border-radius: 0;
-    border: none;
     position: absolute;
     right: 20px ;
 }
@@ -168,17 +157,11 @@ i{
 .addNewCity{
     width: 400px;
     height: 574px;
-    /* background: rgb(0,0,0);
-    background: linear-gradient(66deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.4990371148459384) 100%); */
     display: none;
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
     border-radius: 25px;
-    /* position: static;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
 }
 .addNewCity input , button{
     color: black;
@@ -186,11 +169,12 @@ i{
     height: 60px;
     border: none;
     border-radius: 10px;
-    outline: none;
     margin-bottom: 8px;
+    outline: none;
 }
 
 .addNewCity button {
+    color: white;
     font-size: 24px;
     background: rgb(0,0,0);
     background: linear-gradient(66deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.4990371148459384) 100%);
@@ -213,7 +197,6 @@ i{
 
 footer{
     color: white;
-    font-family: '';
     width: 100%;
     height: 120px;
     display: flex;
@@ -248,14 +231,16 @@ footer img{
     .withButton{
         height: fit-content;
         justify-content: flex-start;
+        background: none;    
+        backdrop-filter: blur(0);
     }
     .withButton #addButton {
         width: 70px ;
         height: 70px;
     }
     .withButton button{
-        background: rgb(0,0,0);
-        background: linear-gradient(66deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.4990371148459384) 100%);
+        background: rgb(0,0,0,);
+        background: linear-gradient(66deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.2990371148459384) 100%);
     }
     .addNewCity{
         width: 100%;
@@ -272,12 +257,7 @@ footer img{
         border-radius: 0;
         margin: 20px 0;
     }
-    .withButton{
-        background: none;    
-        backdrop-filter: blur(0);
-
-        
-    }
+    
 }
 @media only screen and (max-width: 360px) {
     .left, .right{
